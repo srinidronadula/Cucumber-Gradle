@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.featureFiles.karate14</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">4</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2020-12-03 03:46:28 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1.1:4]">[1.1:4] CSV DDT Testing </a>
+</div>
+<div class="nav-item passed">
+<a href="#[1.2:4]">[1.2:4] CSV DDT Testing </a>
+</div>
+<div class="nav-item passed">
+<a href="#[1.3:4]">[1.3:4] CSV DDT Testing </a>
+</div>
+<div class="nav-item passed">
+<a href="#[1.4:4]">[1.4:4] CSV DDT Testing </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/featureFiles/karate14.feature</span><span class="feature-description">Karate Test Suite14 | Demo of reading csv data inside scenario</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1.1:4]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [1.1:4]</span><span class="scenario-name">CSV DDT Testing </span>
+</div>
+<div class="scenario-time passed">ms: 15</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">* print "1, abc, 20, &lt;yob&gt;"</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="preformatted" data-parent="1">15:46:28.226 [print] 1, abc, 20, &lt;yob&gt;</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">* def json1 = {"last_name" : abc}</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">* print json1</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="3">15:46:28.235 [print] {
+  "last_name": "abc"
+}</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1.2:4]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [1.2:4]</span><span class="scenario-name">CSV DDT Testing </span>
+</div>
+<div class="scenario-time passed">ms: 6</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">* print "2, cde, 21, &lt;yob&gt;"</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="preformatted" data-parent="4">15:46:28.242 [print] 2, cde, 21, &lt;yob&gt;</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">* def json1 = {"last_name" : cde}</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">* print json1</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="6">15:46:28.242 [print] {
+  "last_name": "cde"
+}</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1.3:4]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [1.3:4]</span><span class="scenario-name">CSV DDT Testing </span>
+</div>
+<div class="scenario-time passed">ms: 7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">* print "3, aaa, 22, &lt;yob&gt;"</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="preformatted" data-parent="7">15:46:28.251 [print] 3, aaa, 22, &lt;yob&gt;</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">* def json1 = {"last_name" : aaa}</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">* print json1</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="9">15:46:28.251 [print] {
+  "last_name": "aaa"
+}</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1.4:4]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [1.4:4]</span><span class="scenario-name">CSV DDT Testing </span>
+</div>
+<div class="scenario-time passed">ms: 6</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* print "4, ee, 23, &lt;yob&gt;"</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="10">15:46:28.257 [print] 4, ee, 23, &lt;yob&gt;</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">* def json1 = {"last_name" : ee}</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">* print json1</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="12">15:46:28.258 [print] {
+  "last_name": "ee"
+}</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

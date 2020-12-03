@@ -1,0 +1,40 @@
+<testsuite failures="0" name="src/test/java/featureFiles/karate14.feature" skipped="0" tests="4" time="0.03368">
+  <testcase classname="src.test.java.featureFiles.karate14" name="CSV DDT Testing" time="0.014539">
+    <system-out>* print "1, abc, 20, &lt;yob&gt;" ............................................... passed
+* def json1 = {"last_name" : abc} ......................................... passed
+* print json1 ............................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featureFiles.karate14" name="CSV DDT Testing" time="0.006355">
+    <system-out>* print "1, abc, 20, &lt;yob&gt;" ............................................... passed
+* def json1 = {"last_name" : abc} ......................................... passed
+* print json1 ............................................................. passed
+* print "2, cde, 21, &lt;yob&gt;" ............................................... passed
+* def json1 = {"last_name" : cde} ......................................... passed
+* print json1 ............................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featureFiles.karate14" name="CSV DDT Testing" time="0.007257">
+    <system-out>* print "1, abc, 20, &lt;yob&gt;" ............................................... passed
+* def json1 = {"last_name" : abc} ......................................... passed
+* print json1 ............................................................. passed
+* print "2, cde, 21, &lt;yob&gt;" ............................................... passed
+* def json1 = {"last_name" : cde} ......................................... passed
+* print json1 ............................................................. passed
+* print "3, aaa, 22, &lt;yob&gt;" ............................................... passed
+* def json1 = {"last_name" : aaa} ......................................... passed
+* print json1 ............................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featureFiles.karate14" name="CSV DDT Testing" time="0.005529">
+    <system-out>* print "1, abc, 20, &lt;yob&gt;" ............................................... passed
+* def json1 = {"last_name" : abc} ......................................... passed
+* print json1 ............................................................. passed
+* print "2, cde, 21, &lt;yob&gt;" ............................................... passed
+* def json1 = {"last_name" : cde} ......................................... passed
+* print json1 ............................................................. passed
+* print "3, aaa, 22, &lt;yob&gt;" ............................................... passed
+* def json1 = {"last_name" : aaa} ......................................... passed
+* print json1 ............................................................. passed
+* print "4, ee, 23, &lt;yob&gt;" ................................................ passed
+* def json1 = {"last_name" : ee} .......................................... passed
+* print json1 ............................................................. passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,17 @@
+<testsuite failures="1" name="src/test/java/featureFiles/calledfeature.feature" skipped="0" tests="1" time="0.012482">
+  <testcase classname="src.test.java.featureFiles.calledfeature" name="using called feature - url and path in test case" time="0.012482">
+    <failure message="calledfeature.feature:5 - evaluation (js) failed: = &quot;https://reqres.in/&quot;, javax.script.ScriptException: &lt;eval&gt;:1:0 Expected an operand but found =&#13;&#10;= &quot;https://reqres.in/&quot;&#13;&#10;^ in &lt;eval&gt; at line number 1 at column number 0&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)">Given url = "https://reqres.in/" .......................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: calledfeature.feature:5 - evaluation (js) failed: = "https://reqres.in/", javax.script.ScriptException: &lt;eval&gt;:1:0 Expected an operand but found =&#13;
+= "https://reqres.in/"&#13;
+^ in &lt;eval&gt; at line number 1 at column number 0
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.Given url = "https://reqres.in/" (calledfeature.feature:5)&#13;
+
+And path "/api/users" ..................................................... skipped
+And param page = 2 ........................................................ skipped
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped</failure>
+  </testcase>
+</testsuite>

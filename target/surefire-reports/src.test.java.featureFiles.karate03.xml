@@ -1,0 +1,12 @@
+<testsuite failures="0" name="src/test/java/featureFiles/karate03.feature" skipped="0" tests="1" time="0.055147">
+  <testcase classname="src.test.java.featureFiles.karate03" name="xml testCase2" time="0.055147">
+    <system-out>Given def xml = ........................................................... passed
+* print xml ............................................................... passed
+* assert xml.info.id == "101" ............................................. passed
+Then print xml ............................................................ passed
+Then match  xml/info/id == "101" .......................................... passed
+And match  xml.info.id == "101" ........................................... passed
+And match xml contains "&lt;name&gt;Karate&lt;/name&gt;&lt;version&gt;0.9.6&lt;/version&gt;" ...... passed
+And match xml/info/tool[1] contains "&lt;name&gt;Karate&lt;/name&gt;" ................. passed</system-out>
+  </testcase>
+</testsuite>

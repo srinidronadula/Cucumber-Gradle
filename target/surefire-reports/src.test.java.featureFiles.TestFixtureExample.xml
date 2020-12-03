@@ -1,0 +1,18 @@
+<testsuite failures="0" name="src/test/java/featureFiles/TestFixtureExample.feature" skipped="0" tests="2" time="0.011063">
+  <testcase classname="src.test.java.featureFiles.TestFixtureExample" name="Estcase 1" time="0.008093">
+    <system-out>* print "Before Scenario" ................................................. passed
+* configure afterScenario = ............................................... passed
+* configure afterFeature = ................................................ passed
+* print "from Testcase1" .................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featureFiles.TestFixtureExample" name="Estcase 2" time="0.002969">
+    <system-out>* print "Before Scenario" ................................................. passed
+* configure afterScenario = ............................................... passed
+* configure afterFeature = ................................................ passed
+* print "from Testcase1" .................................................. passed
+* print "Before Scenario" ................................................. passed
+* configure afterScenario = ............................................... passed
+* configure afterFeature = ................................................ passed
+* print "from Testcase2" .................................................. passed</system-out>
+  </testcase>
+</testsuite>

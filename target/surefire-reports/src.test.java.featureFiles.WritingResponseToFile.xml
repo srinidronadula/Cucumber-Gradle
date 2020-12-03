@@ -1,0 +1,12 @@
+<testsuite failures="0" name="src/test/java/featureFiles/WritingResponseToFile.feature" skipped="0" tests="1" time="0.692485">
+  <testcase classname="src.test.java.featureFiles.WritingResponseToFile" name="Example1" time="0.692485">
+    <system-out>* def lib = Java.type('misc.Utils') ....................................... passed
+Given url "https://reqres.in/api/users/2" ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def res2 = get response $.support ....................................... passed
+* lib.writeToFile("res3.json", res2) ...................................... passed
+* def res1 = read("classpath:res3.json") .................................. passed
+* print res1 .............................................................. passed</system-out>
+  </testcase>
+</testsuite>

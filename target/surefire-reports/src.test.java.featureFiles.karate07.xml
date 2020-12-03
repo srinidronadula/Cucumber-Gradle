@@ -1,0 +1,14 @@
+<testsuite failures="0" name="src/test/java/featureFiles/karate07.feature" skipped="0" tests="1" time="0.618077">
+  <testcase classname="src.test.java.featureFiles.karate07" name="rest API Testing" time="0.618077">
+    <system-out>Given url "http://dummy.restapiexample.com/api/v1/employees" .............. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def temp = response ..................................................... passed
+* print "srini", temp ..................................................... passed
+And response.status == "sucess" ........................................... passed
+And response.data == "#string" ............................................ passed
+And print(response.data[0].employee_name) ................................. passed
+And response.data[0].employee_name == "Tiger Nixon" ....................... passed
+* match response.data[0].employee_name contains "Tiger" ................... passed</system-out>
+  </testcase>
+</testsuite>

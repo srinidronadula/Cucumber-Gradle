@@ -1,0 +1,8 @@
+<testsuite failures="0" name="src/test/java/featureFiles/karate02.feature" skipped="0" tests="1" time="0.062059">
+  <testcase classname="src.test.java.featureFiles.karate02" name="Json Test case2" time="0.062059">
+    <system-out>Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}} . passed
+* print json .............................................................. passed
+Then json.id == "101" ..................................................... passed
+* assert json.tool.name == "Karate" ....................................... passed</system-out>
+  </testcase>
+</testsuite>

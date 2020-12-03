@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.featureFiles.callingfeature</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">0</div>
+            
+<div class="bg-danger" id="nav-fail">1</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2020-12-02 05:17:51 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item failed">
+<a href="#[1:4]">[1:4] calling Testcase </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/featureFiles/callingfeature.feature</span><span class="feature-description">Calling feature</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:4]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:4]</span><span class="scenario-name">calling Testcase </span>
+</div>
+<div class="scenario-time failed">ms: 1136</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">* def results =  call read("calledfeature.feature")</div>
+</div>
+<div class="time-cell passed">1128</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1.1">
+<div class="step-ref passed">&gt;&gt;</div>
+<div class="step-cell passed">/work/MavenProject/Cucumber-Gradle/src/test/java/featureFiles/calledfeature.feature</div>
+</div>
+<div class="time-cell passed">909</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given url "https://reqres.in/"</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="2">17:17:50.044 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And path "/api/users?page=2"</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And method GET</div>
+</div>
+<div class="time-cell passed">890</div>
+</div>
+<div class="preformatted" data-parent="4">17:17:50.699 request:
+1 &gt; GET https://reqres.in/api/users%3Fpage=2
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+17:17:51.137 response time in milliseconds: 435.18
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Age: 3908
+1 &lt; CF-Cache-Status: HIT
+1 &lt; CF-RAY: 5fb4d0c23966179b-SIN
+1 &lt; Cache-Control: max-age=14400
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Wed, 02 Dec 2020 11:47:50 GMT
+1 &lt; Etag: W/"2c1-N6Rqerxquq2kgQhL51EiSg4x0R8"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"report_to":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=QUsZ2tz9x2H23sGlwF07jS6uboGpYG0wJmWYzBIVak6IlQjWcX7GR9EyHtoAasgu4lJzO9VD73y%2F%2F2bnjJ0qKXRmVtsSo2grloI%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d8f576ecbba56880cc07a1f1bee3caacf1606909670; expires=Fri, 01-Jan-21 11:47:50 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 06c4e0cd670000179bbd358000000001
+{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"name":"cerulean","year":2000,"color":"#98B2D1","pantone_value":"15-4020"},{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},{"id":3,"name":"true red","year":2002,"color":"#BF1932","pantone_value":"19-1664"},{"id":4,"name":"aqua sky","year":2003,"color":"#7BC4C4","pantone_value":"14-4811"},{"id":5,"name":"tigerlily","year":2004,"color":"#E2583E","pantone_value":"17-1456"},{"id":6,"name":"blue turquoise","year":2005,"color":"#53B0AE","pantone_value":"15-5217"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print response</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="preformatted" data-parent="6">17:17:51.178 [print] {
+  "per_page": 6,
+  "total": 12,
+  "data": [
+    {
+      "color": "#98B2D1",
+      "year": 2000,
+      "name": "cerulean",
+      "id": 1,
+      "pantone_value": "15-4020"
+    },
+    {
+      "color": "#C74375",
+      "year": 2001,
+      "name": "fuchsia rose",
+      "id": 2,
+      "pantone_value": "17-2031"
+    },
+    {
+      "color": "#BF1932",
+      "year": 2002,
+      "name": "true red",
+      "id": 3,
+      "pantone_value": "19-1664"
+    },
+    {
+      "color": "#7BC4C4",
+      "year": 2003,
+      "name": "aqua sky",
+      "id": 4,
+      "pantone_value": "14-4811"
+    },
+    {
+      "color": "#E2583E",
+      "year": 2004,
+      "name": "tigerlily",
+      "id": 5,
+      "pantone_value": "17-1456"
+    },
+    {
+      "color": "#53B0AE",
+      "year": 2005,
+      "name": "blue turquoise",
+      "id": 6,
+      "pantone_value": "15-5217"
+    }
+  ],
+  "page": 1,
+  "total_pages": 2,
+  "support": {
+    "text": "To keep ReqRes free, contributions towards server costs are appreciated!",
+    "url": "https://reqres.in/#support-heading"
+  }
+}</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match response.page == "##"</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">* print "srini"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="8">17:17:51.185 [print] srini</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">* print results</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="9">17:17:51.186 [print] {
+  "__arg": null,
+  "responseType": "json",
+  "responseHeaders": {
+    "Date": [
+      "Wed, 02 Dec 2020 11:47:50 GMT"
+    ],
+    "Content-Type": [
+      "application/json; charset=utf-8"
+    ],
+    "Transfer-Encoding": [
+      "chunked"
+    ],
+    "Connection": [
+      "keep-alive"
+    ],
+    "Set-Cookie": [
+      "__cfduid=d8f576ecbba56880cc07a1f1bee3caacf1606909670; expires=Fri, 01-Jan-21 11:47:50 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure"
+    ],
+    "X-Powered-By": [
+      "Express"
+    ],
+    "Access-Control-Allow-Origin": [
+      "*"
+    ],
+    "Etag": [
+      "W/\"2c1-N6Rqerxquq2kgQhL51EiSg4x0R8\""
+    ],
+    "Via": [
+      "1.1 vegur"
+    ],
+    "Cache-Control": [
+      "max-age=14400"
+    ],
+    "CF-Cache-Status": [
+      "HIT"
+    ],
+    "Age": [
+      "3908"
+    ],
+    "cf-request-id": [
+      "06c4e0cd670000179bbd358000000001"
+    ],
+    "Expect-CT": [
+      "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+    ],
+    "Report-To": [
+      "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report?s=QUsZ2tz9x2H23sGlwF07jS6uboGpYG0wJmWYzBIVak6IlQjWcX7GR9EyHtoAasgu4lJzO9VD73y%2F%2F2bnjJ0qKXRmVtsSo2grloI%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+    ],
+    "NEL": [
+      "{\"report_to\":\"cf-nel\",\"max_age\":604800}"
+    ],
+    "Vary": [
+      "Accept-Encoding"
+    ],
+    "Server": [
+      "cloudflare"
+    ],
+    "CF-RAY": [
+      "5fb4d0c23966179b-SIN"
+    ]
+  },
+  "responseTime": 435,
+  "response": {
+    "per_page": 6,
+    "total": 12,
+    "data": [
+      {
+        "color": "#98B2D1",
+        "year": 2000,
+        "name": "cerulean",
+        "id": 1,
+        "pantone_value": "15-4020"
+      },
+      {
+        "color": "#C74375",
+        "year": 2001,
+        "name": "fuchsia rose",
+        "id": 2,
+        "pantone_value": "17-2031"
+      },
+      {
+        "color": "#BF1932",
+        "year": 2002,
+        "name": "true red",
+        "id": 3,
+        "pantone_value": "19-1664"
+      },
+      {
+        "color": "#7BC4C4",
+        "year": 2003,
+        "name": "aqua sky",
+        "id": 4,
+        "pantone_value": "14-4811"
+      },
+      {
+        "color": "#E2583E",
+        "year": 2004,
+        "name": "tigerlily",
+        "id": 5,
+        "pantone_value": "17-1456"
+      },
+      {
+        "color": "#53B0AE",
+        "year": 2005,
+        "name": "blue turquoise",
+        "id": 6,
+        "pantone_value": "15-5217"
+      }
+    ],
+    "page": 1,
+    "total_pages": 2,
+    "support": {
+      "text": "To keep ReqRes free, contributions towards server costs are appreciated!",
+      "url": "https://reqres.in/#support-heading"
+    }
+  },
+  "requestTimeStamp": 1606909670699,
+  "responseStatus": 200,
+  "__loop": -1,
+  "responseCookies": {
+    "__cfduid": {
+      "name": "__cfduid",
+      "value": "d8f576ecbba56880cc07a1f1bee3caacf1606909670",
+      "domain": "reqres.in",
+      "path": "/",
+      "expires": "1609501670000",
+      "persistent": "true",
+      "secure": "true"
+    }
+  }
+}</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* match results.responseType == 'json'</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref failed">11</div>
+<div class="step-cell failed">* match results.responseHeader.Transfer-Encoding[0] == "chunked"</div>
+</div>
+<div class="time-cell failed">3</div>
+</div>
+<div class="preformatted" data-parent="11">17:17:51.191 assertion failed: path: $.responseHeader.Transfer-Encoding[0], actual: null, expected: 'chunked', reason: actual json-path does not exist
+callingfeature.feature:9 - path: $.responseHeader.Transfer-Encoding[0], actual: null, expected: 'chunked', reason: actual json-path does not exist</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref skipped">12</div>
+<div class="step-cell skipped">* match results.response.data[0].name == "cerulean"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

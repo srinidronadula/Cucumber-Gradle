@@ -1,0 +1,14 @@
+<testsuite failures="1" name="src/test/java/featureFiles/karateconfigExample.feature" skipped="0" tests="1" time="0.004932">
+  <testcase classname="src.test.java.featureFiles.karateconfigExample" name="karate config test case1" time="0.004932">
+    <failure message="karateconfigExample.feature:6 - evaluation (js) failed: baseURL, javax.script.ScriptException: ReferenceError: &quot;baseURL&quot; is not defined in &lt;eval&gt; at line number 1&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)">Given url baseURL ......................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karateconfigExample.feature:6 - evaluation (js) failed: baseURL, javax.script.ScriptException: ReferenceError: "baseURL" is not defined in &lt;eval&gt; at line number 1
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.Given url baseURL (karateconfigExample.feature:6)&#13;
+
+And path listUsers ........................................................ skipped
+When method get ........................................................... skipped
+Then status 200 ........................................................... skipped</failure>
+  </testcase>
+</testsuite>

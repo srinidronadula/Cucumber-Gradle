@@ -1,0 +1,17 @@
+<testsuite failures="0" name="src/test/java/featureFiles/splunk1.feature" skipped="0" tests="1" time="0.557055">
+  <testcase classname="src.test.java.featureFiles.splunk1" name="Alert Search 1" time="0.557055">
+    <system-out>* def login = ............................................................. passed
+* def auth = login("admin", "Admin123") ................................... passed
+* print auth .............................................................. passed
+* configure ssl = true .................................................... passed
+Given url "https://192.168.1.90:8089" ..................................... passed
+And header Authorization = auth ........................................... passed
+Given path "/services/alerts/alert_actions" ............................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print responseType ...................................................... passed
+* def title = get response //feed/title ................................... passed
+* print title ............................................................. passed
+* match title == "alert_actions" .......................................... passed</system-out>
+  </testcase>
+</testsuite>

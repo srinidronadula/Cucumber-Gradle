@@ -1,0 +1,17 @@
+<testsuite failures="0" name="src/test/java/featureFiles/karate05.feature" skipped="0" tests="1" time="0.94027">
+  <testcase classname="src.test.java.featureFiles.karate05" name="rest API Testing" time="0.94027">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=40" .................................................. passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match response contains "104" ......................................... passed
+* def temp = response ..................................................... passed
+* print "srini", temp ..................................................... passed
+And match response //string == "104" ...................................... passed
+And match responseHeaders['Server'][0] == 'Microsoft-IIS/7.5' ............. passed
+And match responseHeaders['Server'] == ['Microsoft-IIS/7.5'] .............. passed
+And match responseType == 'xml' ........................................... passed
+And assert responseTime &lt;= '2000' ......................................... passed</system-out>
+  </testcase>
+</testsuite>

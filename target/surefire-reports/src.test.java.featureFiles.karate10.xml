@@ -1,0 +1,24 @@
+<testsuite failures="0" name="src/test/java/featureFiles/karate10.feature" skipped="0" tests="2" time="0.999586">
+  <testcase classname="src.test.java.featureFiles.karate10" name="DD Test case" time="0.824888">
+    <system-out>Given url "https://reqres.in/" ............................................ passed
+And path "/api/users?page=1" .............................................. passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+And match response.page == "##" ........................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featureFiles.karate10" name="DD Test case" time="0.174698">
+    <system-out>Given url "https://reqres.in/" ............................................ passed
+And path "/api/users?page=1" .............................................. passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+And match response.page == "##" ........................................... passed
+Given url "https://reqres.in/" ............................................ passed
+And path "/api/users?page=3" .............................................. passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+And match response.page == "##" ........................................... passed</system-out>
+  </testcase>
+</testsuite>

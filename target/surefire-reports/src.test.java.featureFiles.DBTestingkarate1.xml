@@ -1,0 +1,45 @@
+<testsuite failures="0" name="src/test/java/featureFiles/DBTestingkarate1.feature" skipped="0" tests="4" time="0.593143">
+  <testcase classname="src.test.java.featureFiles.DBTestingkarate1" name="select stmt testcase" time="0.494745">
+    <system-out>* def db = Java.type('misc.MyDbUtil') ..................................... passed
+* def rows = db.selectStatement('select * from tools') .................... passed
+* print rows .............................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featureFiles.DBTestingkarate1" name="insert stmt testcase" time="0.035406">
+    <system-out>* def db = Java.type('misc.MyDbUtil') ..................................... passed
+* def rows = db.selectStatement('select * from tools') .................... passed
+* print rows .............................................................. passed
+* def db = Java.type('misc.MyDbUtil') ..................................... passed
+* def res = db.insertStatement("insert into tools values(333,'sample','abc')") . passed
+* print res ............................................................... passed
+* match res == "Success" .................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featureFiles.DBTestingkarate1" name="update stmt testcase" time="0.033783">
+    <system-out>* def db = Java.type('misc.MyDbUtil') ..................................... passed
+* def rows = db.selectStatement('select * from tools') .................... passed
+* print rows .............................................................. passed
+* def db = Java.type('misc.MyDbUtil') ..................................... passed
+* def res = db.insertStatement("insert into tools values(333,'sample','abc')") . passed
+* print res ............................................................... passed
+* match res == "Success" .................................................. passed
+* def db = Java.type('misc.MyDbUtil') ..................................... passed
+* def rowsAffected = db.updateStatement("update  tools SET toolname = 'srinivas' where toolid = 333") . passed
+* print rowsAffected ...................................................... passed
+* match rowsAffected == 1 ................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featureFiles.DBTestingkarate1" name="delete stmt testcase" time="0.029209">
+    <system-out>* def db = Java.type('misc.MyDbUtil') ..................................... passed
+* def rows = db.selectStatement('select * from tools') .................... passed
+* print rows .............................................................. passed
+* def db = Java.type('misc.MyDbUtil') ..................................... passed
+* def res = db.insertStatement("insert into tools values(333,'sample','abc')") . passed
+* print res ............................................................... passed
+* match res == "Success" .................................................. passed
+* def db = Java.type('misc.MyDbUtil') ..................................... passed
+* def rowsAffected = db.updateStatement("update  tools SET toolname = 'srinivas' where toolid = 333") . passed
+* print rowsAffected ...................................................... passed
+* match rowsAffected == 1 ................................................. passed
+* def db = Java.type('misc.MyDbUtil') ..................................... passed
+* def deleterows = db.deleteStatement("delete  from tools where toolid = 333") . passed
+* print deleterows ........................................................ passed</system-out>
+  </testcase>
+</testsuite>

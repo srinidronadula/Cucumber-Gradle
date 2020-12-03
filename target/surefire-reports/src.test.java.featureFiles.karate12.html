@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.featureFiles.karate12</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">2</div>
+            
+<div class="bg-danger" id="nav-fail">1</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2020-12-02 06:25:45 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:4]">[1:4] calling static &amp;&amp; non static vars in Java  using test case </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2:9]">[2:9] calling static &amp;&amp; non static vars in Java  using test case </a>
+</div>
+<div class="nav-item failed">
+<a href="#[3:23]">[3:23] calling static &amp;&amp; non static vars in Java  using test case </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/featureFiles/karate12.feature</span><span class="feature-description">Karate Test Suite12 | Demo of using java class variables inside scenario</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:4]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:4]</span><span class="scenario-name">calling static &amp;&amp; non static vars in Java  using test case </span>
+</div>
+<div class="scenario-time passed">ms: 18</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">* def constants = Java.type('misc.AutomationConstants')</div>
+</div>
+<div class="time-cell passed">9</div>
+</div>
+<div class="preformatted" data-parent="1">18:25:45.241 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">* print constants.devURL</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="preformatted" data-parent="2">18:25:45.273 [print] https://reqres.in/</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">* print constants.getDevURL()</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="3">18:25:45.273 [print] https://reqres.in/</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:9]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [2:9]</span><span class="scenario-name">calling static &amp;&amp; non static vars in Java  using test case </span>
+</div>
+<div class="scenario-time passed">ms: 20</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">* def env1 =</div>
+</div>
+<div class="time-cell passed">11</div>
+</div>
+<div class="preformatted" data-parent="4">function fn1()
+{
+  var var1 = Java.type('misc.AutomationConstants');
+  var var2 = new var1();
+  return var2.qaURL;
+}
+18:25:45.273 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">* def qaURL = call env1</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">* print qaURL</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="6">18:25:45.304 [print] https://reqresQA.in/</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3:23]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [3:23]</span><span class="scenario-name">calling static &amp;&amp; non static vars in Java  using test case </span>
+</div>
+<div class="scenario-time failed">ms: 11</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">* def env1 =</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="7">function fn1()
+{
+  return new Java.type('misc.AutomationConstants')().qaURL;
+}
+18:25:45.304 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref failed">8</div>
+<div class="step-cell failed">* def qaURL = call env1</div>
+</div>
+<div class="time-cell failed">8</div>
+</div>
+<div class="preformatted" data-parent="8">18:25:45.320 javascript function call failed: &lt;eval&gt;:3 TypeError: function type() { [native code] } is not a constructor function
+18:25:45.320 failed function body: function fn1()
+{
+  return new Java.type('misc.AutomationConstants')().qaURL;
+}
+karate12.feature:35 - javascript function call failed: &lt;eval&gt;:3 TypeError: function type() { [native code] } is not a constructor function</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref skipped">9</div>
+<div class="step-cell skipped">* print qaURL</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

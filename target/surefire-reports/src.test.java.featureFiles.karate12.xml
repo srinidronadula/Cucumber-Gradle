@@ -1,0 +1,31 @@
+<testsuite failures="1" name="src/test/java/featureFiles/karate12.feature" skipped="0" tests="3" time="0.048702">
+  <testcase classname="src.test.java.featureFiles.karate12" name="calling static &amp;&amp; non static vars in Java  using test case" time="0.017793">
+    <system-out>* def constants = Java.type('misc.AutomationConstants') ................... passed
+* print constants.devURL .................................................. passed
+* print constants.getDevURL() ............................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featureFiles.karate12" name="calling static &amp;&amp; non static vars in Java  using test case" time="0.019693">
+    <system-out>* def constants = Java.type('misc.AutomationConstants') ................... passed
+* print constants.devURL .................................................. passed
+* print constants.getDevURL() ............................................. passed
+* def env1 = .............................................................. passed
+* def qaURL = call env1 ................................................... passed
+* print qaURL ............................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featureFiles.karate12" name="calling static &amp;&amp; non static vars in Java  using test case" time="0.011216">
+    <failure message="karate12.feature:35 - javascript function call failed: &lt;eval&gt;:3 TypeError: function type() { [native code] } is not a constructor function">* def constants = Java.type('misc.AutomationConstants') ................... passed
+* print constants.devURL .................................................. passed
+* print constants.getDevURL() ............................................. passed
+* def env1 = .............................................................. passed
+* def qaURL = call env1 ................................................... passed
+* print qaURL ............................................................. passed
+* def env1 = .............................................................. passed
+* def qaURL = call env1 ................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate12.feature:35 - javascript function call failed: &lt;eval&gt;:3 TypeError: function type() { [native code] } is not a constructor function&#13;
+	at ✽.* def qaURL = call env1 (karate12.feature:35)&#13;
+
+* print qaURL ............................................................. skipped</failure>
+  </testcase>
+</testsuite>

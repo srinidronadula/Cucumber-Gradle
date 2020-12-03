@@ -1,0 +1,15 @@
+<testsuite failures="1" name="src/test/java/featureFiles/callingfeature.feature" skipped="0" tests="1" time="1.136483">
+  <testcase classname="src.test.java.featureFiles.callingfeature" name="calling Testcase" time="1.136483">
+    <failure message="callingfeature.feature:9 - path: $.responseHeader.Transfer-Encoding[0], actual: null, expected: 'chunked', reason: actual json-path does not exist">* def results =  call read("calledfeature.feature") ....................... passed
+* print "srini" ........................................................... passed
+* print results ........................................................... passed
+* match results.responseType == 'json' .................................... passed
+* match results.responseHeader.Transfer-Encoding[0] == "chunked" .......... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: callingfeature.feature:9 - path: $.responseHeader.Transfer-Encoding[0], actual: null, expected: 'chunked', reason: actual json-path does not exist&#13;
+	at ✽.* match results.responseHeader.Transfer-Encoding[0] == "chunked" (callingfeature.feature:9)&#13;
+
+* match results.response.data[0].name == "cerulean" ....................... skipped</failure>
+  </testcase>
+</testsuite>

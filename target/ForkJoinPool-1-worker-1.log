@@ -1,0 +1,1687 @@
+17:39:10.444 From karate-config 
+17:39:10.788 [print] Before Scenario
+17:39:10.804 [print] from Testcase1
+17:39:10.804  from After scenario 
+17:39:10.804 From karate-config 
+17:39:10.804 [print] Before Scenario
+17:39:10.819 [print] from Testcase2
+17:39:10.819  from After scenario 
+17:39:10.819  from After Feature 
+
+1 > Connection: Keep-Alive
+1 > Host: 192.168.1.90:8089
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+16:51:40.222 response time in milliseconds: 151.86
+1 < 200
+1 < Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+1 < Connection: Keep-Alive
+1 < Content-Type: text/xml; charset=UTF-8
+1 < Date: Thu, 03 Dec 2020 11:21:38 GMT
+1 < Expires: Thu, 26 Oct 1978 00:00:00 GMT
+1 < Server: Splunkd
+1 < Vary: Accept-Encoding, Cookie, Authorization
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is to override browser formatting; see server.conf[httpServer] to disable. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+<?xml-stylesheet type="text/xml" href="/static/atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:s="http://dev.splunk.com/ns/rest" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
+  <title>alert_actions</title>
+  <id>https://192.168.1.90:8089/services/alerts/alert_actions</id>
+  <updated>2020-12-03T16:51:38+05:30</updated>
+  <generator build="24fd52428b5a" version="8.1.0.1"/>
+  <author>
+    <name>Splunk</name>
+  </author>
+  <link href="/services/alerts/alert_actions/_reload" rel="_reload"/>
+  <link href="/services/alerts/alert_actions/_acl" rel="_acl"/>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <s:messages/>
+  <entry>
+    <title>email</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/system/alerts/alert_actions/email</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/email" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/email" rel="list"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/email/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/email" rel="edit"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/email/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="allow_empty_attachment">1</s:key>
+        <s:key name="allowedDomainList"></s:key>
+        <s:key name="bcc"></s:key>
+        <s:key name="cc"></s:key>
+        <s:key name="cipherSuite">ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256</s:key>
+        <s:key name="command"><![CDATA[$action.email.preprocess_results{default=""}$ | sendemail "results_link=$results.url$" "ssname=$name$" "graceful=$graceful{default=True}$" "trigger_time=$trigger_time$" maxinputs="$action.email.maxresults{default=10000}$" maxtime="$action.email.maxtime{default=5m}$" results_file="$results.file$"]]></s:key>
+        <s:key name="content_type">html</s:key>
+        <s:key name="description">Send an email notification to specified recipients</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">system</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">system</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">nobody</s:key>
+        <s:key name="footer.text">If you believe you've received this email in error, please see your Splunk administrator.
+
+splunk &gt; the engine for machine data</s:key>
+        <s:key name="forceCsvResults">auto</s:key>
+        <s:key name="format">table</s:key>
+        <s:key name="from">splunk</s:key>
+        <s:key name="hostname"></s:key>
+        <s:key name="icon_path">mod_alert_icon_email.png</s:key>
+        <s:key name="include.results_link">1</s:key>
+        <s:key name="include.search">0</s:key>
+        <s:key name="include.trigger">0</s:key>
+        <s:key name="include.trigger_time">0</s:key>
+        <s:key name="include.view_link">1</s:key>
+        <s:key name="inline">0</s:key>
+        <s:key name="label">Send email</s:key>
+        <s:key name="mailserver">localhost</s:key>
+        <s:key name="maxresults">10000</s:key>
+        <s:key name="maxtime">5m</s:key>
+        <s:key name="message.alert">The alert condition for '$name$' was triggered.</s:key>
+        <s:key name="message.report">The scheduled report '$name$' has run.</s:key>
+        <s:key name="pdf.footer_center">title</s:key>
+        <s:key name="pdf.footer_enabled">1</s:key>
+        <s:key name="pdf.footer_left">logo</s:key>
+        <s:key name="pdf.footer_right">timestamp,pagination</s:key>
+        <s:key name="pdf.header_center">description</s:key>
+        <s:key name="pdf.header_enabled">1</s:key>
+        <s:key name="pdf.html_image_rendering">1</s:key>
+        <s:key name="pdfview"></s:key>
+        <s:key name="preprocess_results"></s:key>
+        <s:key name="priority">3</s:key>
+        <s:key name="reportCIDFontList">gb cns jp kor</s:key>
+        <s:key name="reportFileName">$name$-$time:%Y-%m-%d$</s:key>
+        <s:key name="reportIncludeSplunkLogo">1</s:key>
+        <s:key name="reportPaperOrientation">portrait</s:key>
+        <s:key name="reportPaperSize">letter</s:key>
+        <s:key name="sendcsv">0</s:key>
+        <s:key name="sendpdf">0</s:key>
+        <s:key name="sendresults">0</s:key>
+        <s:key name="sslVersions">tls1.2</s:key>
+        <s:key name="subject">Splunk Alert: $name$</s:key>
+        <s:key name="subject.alert">Splunk Alert: $name$</s:key>
+        <s:key name="subject.report">Splunk Report: $name$</s:key>
+        <s:key name="to"></s:key>
+        <s:key name="track_alert">1</s:key>
+        <s:key name="ttl">86400</s:key>
+        <s:key name="useNSSubject">0</s:key>
+        <s:key name="use_ssl">0</s:key>
+        <s:key name="use_tls">0</s:key>
+        <s:key name="width_sort_columns">1</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>logevent</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/alert_logevent/alerts/alert_actions/logevent</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/alert_logevent/alerts/alert_actions/logevent" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/alert_logevent/alerts/alert_actions/logevent" rel="list"/>
+    <link href="/servicesNS/nobody/alert_logevent/alerts/alert_actions/logevent/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/alert_logevent/alerts/alert_actions/logevent" rel="edit"/>
+    <link href="/servicesNS/nobody/alert_logevent/alerts/alert_actions/logevent/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="command">sendalert $action_name$ results_file="$results.file$" results_link="$results.url$"</s:key>
+        <s:key name="description">Send log event to Splunk receiver endpoint</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">alert_logevent</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">nobody</s:key>
+        <s:key name="forceCsvResults">auto</s:key>
+        <s:key name="hostname"></s:key>
+        <s:key name="icon_path">logevent.png</s:key>
+        <s:key name="is_custom">1</s:key>
+        <s:key name="label">Log Event</s:key>
+        <s:key name="maxresults">10000</s:key>
+        <s:key name="maxtime">5m</s:key>
+        <s:key name="param.host"></s:key>
+        <s:key name="param.index">main</s:key>
+        <s:key name="param.source">alert:$name$</s:key>
+        <s:key name="param.sourcetype">generic_single_line</s:key>
+        <s:key name="payload_format">json</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="track_alert">0</s:key>
+        <s:key name="ttl">10p</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>lookup</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/system/alerts/alert_actions/lookup</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/lookup" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/lookup" rel="list"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/lookup/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/lookup" rel="edit"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/lookup/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="append">0</s:key>
+        <s:key name="command">outputlookup "$action.lookup.filename$" append=$action.lookup.append$</s:key>
+        <s:key name="description">Output the results of the search to a CSV lookup file</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">system</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">system</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">nobody</s:key>
+        <s:key name="filename"></s:key>
+        <s:key name="forceCsvResults">auto</s:key>
+        <s:key name="hostname"></s:key>
+        <s:key name="icon_path">mod_alert_icon_lookup.png</s:key>
+        <s:key name="label">Output results to lookup</s:key>
+        <s:key name="maxresults">10000</s:key>
+        <s:key name="maxtime">5m</s:key>
+        <s:key name="track_alert">0</s:key>
+        <s:key name="ttl">10p</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>outputtelemetry</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/splunk_instrumentation/alerts/alert_actions/outputtelemetry</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/splunk_instrumentation/alerts/alert_actions/outputtelemetry" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/splunk_instrumentation/alerts/alert_actions/outputtelemetry" rel="list"/>
+    <link href="/servicesNS/nobody/splunk_instrumentation/alerts/alert_actions/outputtelemetry/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/splunk_instrumentation/alerts/alert_actions/outputtelemetry" rel="edit"/>
+    <link href="/servicesNS/nobody/splunk_instrumentation/alerts/alert_actions/outputtelemetry/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="command"><![CDATA[outputtelemetry input=$action.outputtelemetry.param.input$ anonymous=$action.outputtelemetry.param.anonymous$ license=$action.outputtelemetry.param.license$ support=$action.outputtelemetry.param.support$ component=$action.outputtelemetry.param.component$ type=$action.outputtelemetry.param.type$ optinrequired=$action.outputtelemetry.param.optinrequired$]]></s:key>
+        <s:key name="description">Custom action to output results to telemetry endpoint</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">splunk_instrumentation</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">nobody</s:key>
+        <s:key name="forceCsvResults">auto</s:key>
+        <s:key name="hostname"></s:key>
+        <s:key name="icon_path">outputtelemetry.png</s:key>
+        <s:key name="is_custom">1</s:key>
+        <s:key name="label">Output results to telemetry endpoint</s:key>
+        <s:key name="maxresults">10000</s:key>
+        <s:key name="maxtime">5m</s:key>
+        <s:key name="param.anonymous">1</s:key>
+        <s:key name="param.component"></s:key>
+        <s:key name="param.input"></s:key>
+        <s:key name="param.license">0</s:key>
+        <s:key name="param.optinrequired">1</s:key>
+        <s:key name="param.support">1</s:key>
+        <s:key name="param.type">event</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="track_alert">0</s:key>
+        <s:key name="ttl">120</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>populate_lookup</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/system/alerts/alert_actions/populate_lookup</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/populate_lookup" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/populate_lookup" rel="list"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/populate_lookup/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/populate_lookup" rel="edit"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/populate_lookup/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="command">copyresults dest="$action.populate_lookup.dest$"  sid="$search_id$"</s:key>
+        <s:key name="dest"></s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">system</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">system</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">nobody</s:key>
+        <s:key name="forceCsvResults">auto</s:key>
+        <s:key name="hostname"></s:key>
+        <s:key name="maxresults">10000</s:key>
+        <s:key name="maxtime">5m</s:key>
+        <s:key name="track_alert">0</s:key>
+        <s:key name="ttl">120</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>rss</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/system/alerts/alert_actions/rss</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/rss" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/rss" rel="list"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/rss/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/rss" rel="edit"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/rss/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="command">createrss "path=$name$.xml" "name=$name$" "link=$results.url$" "descr=Alert trigger: $name$, results.count=$results.count$ " "count=30" "graceful=$graceful{default=1}$" maxtime="$action.rss.maxtime{default=1m}$"</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">system</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">system</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">nobody</s:key>
+        <s:key name="forceCsvResults">auto</s:key>
+        <s:key name="hostname"></s:key>
+        <s:key name="maxresults">10000</s:key>
+        <s:key name="maxtime">1m</s:key>
+        <s:key name="track_alert">0</s:key>
+        <s:key name="ttl">86400</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>script</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/system/alerts/alert_actions/script</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/script" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/script" rel="list"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/script/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/script" rel="edit"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/script/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="command">runshellscript "$action.script.filename$" "$results.count$" "$search$" "$search$" "$name$" "Saved Search [$name$] $counttype$($results.count$)" "$results.url$" "$deprecated_arg$" "$search_id$" "$results.file$" maxtime="$action.script.maxtime{default=5m}$"</s:key>
+        <s:key name="description">Invoke a custom script</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">system</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">system</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">nobody</s:key>
+        <s:key name="filename"></s:key>
+        <s:key name="forceCsvResults">auto</s:key>
+        <s:key name="hostname"></s:key>
+        <s:key name="icon_path">mod_alert_icon_script.png</s:key>
+        <s:key name="label">Run a script</s:key>
+        <s:key name="maxresults">10000</s:key>
+        <s:key name="maxtime">5m</s:key>
+        <s:key name="track_alert">1</s:key>
+        <s:key name="ttl">600</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>summary_index</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/system/alerts/alert_actions/summary_index</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/summary_index" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/summary_index" rel="list"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/summary_index/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/summary_index" rel="edit"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/summary_index/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="_name">summary</s:key>
+        <s:key name="command"><![CDATA[summaryindex spool=t uselb=t addtime=t index="$action.summary_index._name{required=yes}$" file="$name_hash$_$#random$.stash_new" name="$name$" marker="$action.summary_index*{format=$KEY=\\\"$VAL\\\", key_regex="action.summary_index.(?!(?:command|forceCsvResults|force_realtime_schedule|inline|maxresults|maxtime|python\\.version|ttl|track_alert|(?:_.*))$)(.*)"}$"]]></s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">system</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">system</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">nobody</s:key>
+        <s:key name="forceCsvResults">auto</s:key>
+        <s:key name="hostname"></s:key>
+        <s:key name="inline">1</s:key>
+        <s:key name="maxresults">10000</s:key>
+        <s:key name="maxtime">5m</s:key>
+        <s:key name="track_alert">0</s:key>
+        <s:key name="ttl">120</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>summary_metric_index</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/system/alerts/alert_actions/summary_metric_index</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/summary_metric_index" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/summary_metric_index" rel="list"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/summary_metric_index/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/summary_metric_index" rel="edit"/>
+    <link href="/servicesNS/nobody/system/alerts/alert_actions/summary_metric_index/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="_name">summary</s:key>
+        <s:key name="command"><![CDATA[mcollect spool=t index="$action.summary_index._name{required=yes}$" file="$name_hash$_$#random$.stash_new" name="$name$" marker="$action.summary_index*{format=$KEY=\\\"$VAL\\\", key_regex="action.summary_index.(?!(?:command|forceCsvResults|force_realtime_schedule|inline|maxresults|maxtime|python\\.version|ttl|track_alert|(?:_.*))$)(.*)"}$" split=allnums $action.summary_index._metric_dims$]]></s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">system</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">system</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">nobody</s:key>
+        <s:key name="forceCsvResults">auto</s:key>
+        <s:key name="hostname"></s:key>
+        <s:key name="inline">1</s:key>
+        <s:key name="maxresults">10000</s:key>
+        <s:key name="maxtime">5m</s:key>
+        <s:key name="track_alert">0</s:key>
+        <s:key name="ttl">120</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>webhook</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/alert_webhook/alerts/alert_actions/webhook</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/alert_webhook/alerts/alert_actions/webhook" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/alert_webhook/alerts/alert_actions/webhook" rel="list"/>
+    <link href="/servicesNS/nobody/alert_webhook/alerts/alert_actions/webhook/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/alert_webhook/alerts/alert_actions/webhook" rel="edit"/>
+    <link href="/servicesNS/nobody/alert_webhook/alerts/alert_actions/webhook/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="command">sendalert $action_name$ results_file="$results.file$" results_link="$results.url$"</s:key>
+        <s:key name="description">Generic HTTP POST to a specified URL</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">alert_webhook</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">nobody</s:key>
+        <s:key name="forceCsvResults">auto</s:key>
+        <s:key name="hostname"></s:key>
+        <s:key name="icon_path">webhook.png</s:key>
+        <s:key name="is_custom">1</s:key>
+        <s:key name="label">Webhook</s:key>
+        <s:key name="maxresults">10000</s:key>
+        <s:key name="maxtime">5m</s:key>
+        <s:key name="param.user_agent">Splunk/$server.guid$</s:key>
+        <s:key name="payload_format">json</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="track_alert">0</s:key>
+        <s:key name="ttl">10p</s:key>
+      </s:dict>
+    </content>
+  </entry>
+</feed>
+
+
+16:51:40.238 [print] xml
+16:51:40.253 [print] alert_actions
+ed">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">0</s:key>
+        <s:key name="filename">predict.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="overrides_timeorder">0</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">1</s:key>
+        <s:key name="streaming">0</s:key>
+        <s:key name="supports_getinfo">1</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>rawstats</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/rawstats</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/rawstats" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/rawstats" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/rawstats/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/rawstats/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">1</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">rawstats.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="overrides_timeorder">0</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">1</s:key>
+        <s:key name="streaming">1</s:key>
+        <s:key name="supports_getinfo">0</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>reltime</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/reltime</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/reltime" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/reltime" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/reltime/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/reltime/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">1</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">reltime.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="overrides_timeorder">0</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">1</s:key>
+        <s:key name="streaming">1</s:key>
+        <s:key name="supports_getinfo">0</s:key>
+        <s:key name="supports_multivalues">1</s:key>
+        <s:key name="supports_rawargs">1</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>return</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/return</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/return" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/return" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/return/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/return/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">1</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">return.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">1</s:key>
+        <s:key name="overrides_timeorder">1</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">0</s:key>
+        <s:key name="streaming">0</s:key>
+        <s:key name="supports_getinfo">1</s:key>
+        <s:key name="supports_rawargs">1</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>runshellscript</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/runshellscript</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/runshellscript" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/runshellscript" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/runshellscript/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/runshellscript/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">1</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">runshellscript.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">true</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="passauth">1</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields"></s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">0</s:key>
+        <s:key name="streaming">0</s:key>
+        <s:key name="supports_getinfo">0</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>scrub</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/scrub</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/scrub" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/scrub" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/scrub/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/scrub/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">1</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">scrub.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="overrides_timeorder">0</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">1</s:key>
+        <s:key name="streaming">0</s:key>
+        <s:key name="supports_getinfo">0</s:key>
+        <s:key name="supports_rawargs">1</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>searchtxn</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/searchtxn</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/searchtxn" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/searchtxn" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/searchtxn/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/searchtxn/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">1</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">searchtxn.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">1</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">1</s:key>
+        <s:key name="overrides_timeorder">0</s:key>
+        <s:key name="passauth">1</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">1</s:key>
+        <s:key name="streaming">0</s:key>
+        <s:key name="supports_getinfo">0</s:key>
+        <s:key name="supports_rawargs">1</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>sendemail</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/sendemail</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/sendemail" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/sendemail" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/sendemail/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/sendemail/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">0</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">sendemail.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">true</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="passauth">1</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields"></s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">0</s:key>
+        <s:key name="run_in_preview">0</s:key>
+        <s:key name="streaming">0</s:key>
+        <s:key name="supports_getinfo">0</s:key>
+        <s:key name="supports_multivalues">1</s:key>
+        <s:key name="supports_rawargs">1</s:key>
+        <s:key name="type">python</s:key>
+        <s:key name="undo_scheduler_escaping">true</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>streambag</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/streambag</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/streambag" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/streambag" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/streambag/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/streambag/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">1</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">streambag.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">stream</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">0</s:key>
+        <s:key name="streaming">1</s:key>
+        <s:key name="supports_getinfo">0</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>trendline</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/trendline</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/trendline" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/trendline" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/trendline/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/trendline/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">0</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">0</s:key>
+        <s:key name="filename">trendline.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="overrides_timeorder">0</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">1</s:key>
+        <s:key name="streaming">0</s:key>
+        <s:key name="supports_getinfo">1</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>windbag</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/windbag</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/windbag" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/windbag" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/windbag/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/windbag/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">1</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">windbag.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">1</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">0</s:key>
+        <s:key name="streaming">1</s:key>
+        <s:key name="supports_getinfo">0</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>x11</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/x11</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/x11" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/x11" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/x11/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/x11/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">0</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">0</s:key>
+        <s:key name="filename">deseasonal.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="overrides_timeorder">0</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">1</s:key>
+        <s:key name="streaming">0</s:key>
+        <s:key name="supports_getinfo">1</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>xmlkv</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/xmlkv</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/xmlkv" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/xmlkv" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/xmlkv/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/xmlkv/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">1</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">xmlkv.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">0</s:key>
+        <s:key name="streaming">1</s:key>
+        <s:key name="supports_getinfo">0</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>xmlunescape</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/xmlunescape</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/xmlunescape" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/xmlunescape" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/xmlunescape/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/xmlunescape/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">1</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">xmlunescape.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="overrides_timeorder">0</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">1</s:key>
+        <s:key name="streaming">0</s:key>
+        <s:key name="supports_getinfo">0</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>xpath</title>
+    <id>https://192.168.1.90:8089/servicesNS/nobody/search/data/commands/xpath</id>
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <link href="/servicesNS/nobody/search/data/commands/xpath" rel="alternate"/>
+    <author>
+      <name>nobody</name>
+    </author>
+    <link href="/servicesNS/nobody/search/data/commands/xpath" rel="list"/>
+    <link href="/servicesNS/nobody/search/data/commands/xpath/_reload" rel="_reload"/>
+    <link href="/servicesNS/nobody/search/data/commands/xpath/disable" rel="disable"/>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="changes_colorder">1</s:key>
+        <s:key name="disabled">0</s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="app">search</s:key>
+            <s:key name="can_change_perms">1</s:key>
+            <s:key name="can_list">1</s:key>
+            <s:key name="can_share_app">1</s:key>
+            <s:key name="can_share_global">1</s:key>
+            <s:key name="can_share_user">0</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="owner">nobody</s:key>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>admin</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="removable">0</s:key>
+            <s:key name="sharing">global</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:appName">search</s:key>
+        <s:key name="eai:userName">admin</s:key>
+        <s:key name="enableheader">1</s:key>
+        <s:key name="filename">xpath.py</s:key>
+        <s:key name="generates_timeorder">0</s:key>
+        <s:key name="generating">0</s:key>
+        <s:key name="is_risky">false</s:key>
+        <s:key name="maxinputs">50000</s:key>
+        <s:key name="outputheader">0</s:key>
+        <s:key name="overrides_timeorder">0</s:key>
+        <s:key name="passauth">0</s:key>
+        <s:key name="perf_warn_limit">0</s:key>
+        <s:key name="python.version">python3</s:key>
+        <s:key name="required_fields">*</s:key>
+        <s:key name="requires_preop">0</s:key>
+        <s:key name="retainsevents">1</s:key>
+        <s:key name="streaming">1</s:key>
+        <s:key name="supports_getinfo">0</s:key>
+        <s:key name="supports_rawargs">1</s:key>
+        <s:key name="type">python</s:key>
+      </s:dict>
+    </content>
+  </entry>
+</feed>
+
+
+16:48:40.194 [print] xml
+16:48:20.976 [print] commandsconf
+16:48:20.991 assertion failed: path: $, actual: 'commandsconf', expected: 'alert_actions', reason: not equal

@@ -1,0 +1,17 @@
+<testsuite failures="0" name="featureFiles/karate04.feature" skipped="0" tests="1" time="0.694427">
+  <testcase classname="featureFiles.karate04" name="SOAP API Testing" time="0.694427">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx" ................ passed
+And header Content-Type = "text/xml; charset=utf-8" ....................... passed
+And request ............................................................... passed
+When soap action "https://www.w3schools.com/xml/CelsiusToFahrenheit" ...... passed
+Then status 200 ........................................................... passed
+And match response contains "98.6" ........................................ passed
+* def temp = response ..................................................... passed
+* print "srini", temp ..................................................... passed
+And match response //CelsiusToFahrenheitResult == "98.6" .................. passed
+And match responseHeaders['Server'][0] == 'Microsoft-IIS/7.5' ............. passed
+And match responseHeaders['Server'] == ['Microsoft-IIS/7.5'] .............. passed
+And match responseType == 'xml' ........................................... passed
+And assert responseTime &lt;= '2000' ......................................... passed</system-out>
+  </testcase>
+</testsuite>
