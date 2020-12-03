@@ -18,3 +18,4 @@ Feature: Test Fixture
       * print "from Testcase1"
   Scenario: Estcase 2
     * print "from Testcase2"
+    * print "srini"
